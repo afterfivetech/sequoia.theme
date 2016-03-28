@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<registry>
+    <records prefix="plone.resources/sequoia-main"
+              interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+       <value key="css">
+          <element>++theme++sequoia.theme/css/main.less</element>
+       </value>
+    </records>
+
+    <!-- bundle definition -->
+    <records prefix="plone.bundles/sequoia-bundle"
+              interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+      <value key="resources">
+        <element>sequoia-main</element>
+      </value>
+      <value key="enabled">True</value>
+      <value key="compile">True</value>
+      <value key="csscompilation">++theme++sequoia.theme/css/sequoia-compiled.css</value>
+      <value key="last_compilation"></value>
+    </records>
+</registry>
