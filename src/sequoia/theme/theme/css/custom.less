@@ -1,0 +1,172 @@
+//Custom CSS
+body{
+    background: #FEFFEA url(../images/body_bg.gif) repeat-x fixed top center;
+    font-size: 12px;
+}
+
+.portlet .portletContent{
+    font-size: 12px;
+}
+
+//header
+#portal-logo{
+    margin-top: 25px;
+    display: inline-block;
+}
+
+//navigation                
+#navigation{
+    margin-bottom: 20px;
+}
+
+#portal-globalnav-wrapper{
+    background: #91e842;
+    background: -moz-linear-gradient(top,  #91e842 0%, #7abb41 100%);
+    background: -webkit-linear-gradient(top,  #91e842 0%,#7abb41 100%);
+    background: linear-gradient(to bottom,  #91e842 0%,#7abb41 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#91e842', endColorstr='#7abb41',GradientType=0 );
+    border-radius: 10px;
+    border: none;
+    #portal-globalnav{
+        li{
+            a{
+                color: #fff;
+                text-shadow: 0 1px 1px #888888;
+                font-weight: bold;
+                font-size: 14px;
+                background-color: transparent;
+            }
+        }
+        li.selected {
+            a{
+                color: #253714;
+                text-shadow: 0 1px 1px #D9EBC3;
+                background: none transparent; 
+            }
+        }
+        li{
+            a:hover{
+                color: #253714;
+                text-shadow: 0 1px 1px #D9EBC3;
+                background: none transparent; 
+            }
+        }
+    }
+}
+
+//carousel
+#carousel-container{
+    margin-bottom: 20px;
+}
+#carousel{
+    background-color: #dbe8ae;
+    height: 500px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+//feature
+.feature{
+    border: 2px solid #b2cd6e;
+    background: #ebf3d5;
+    background: -moz-linear-gradient(top,  #ebf3d5 0%, #dbe8ae 100%);
+    background: -webkit-linear-gradient(top,  #ebf3d5 0%,#dbe8ae 100%);
+    background: linear-gradient(to bottom,  #ebf3d5 0%,#dbe8ae 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3d5', endColorstr='#dbe8ae',GradientType=0 );
+    h3{
+        font-size: 16px;
+    }
+}
+
+//sibar for inner pag
+#column2-container{
+    background: url(../images/vr3.png) no-repeat center left;
+    min-height: 639px;
+}
+
+//sidebar for homepage
+.section-front-page #column2-container{
+    background: url(../images/vr2.png) no-repeat center left;
+    min-height: 362px;
+}
+
+//main container
+#main-container{
+    margin-bottom: 20px;
+}
+
+//top info
+#top_info{
+    background-color: #FCFDED;
+    border-left: 1px solid #AFC96C;
+    border-right: 1px solid #AFC96C;
+    border-bottom: 1px solid #AFC96C;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+    font-family: Georgia, sans-serif;
+    dt{
+        background-color: #AFC96C;
+        margin-left: -5px;
+        margin-right: -5px;
+        font-size: 20px;
+        color: #FFFFEE;
+        font-weight: normal;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    dd{
+        margin: 5px 20px;
+        strong{
+            color: #DA4A15;
+        }
+    }
+}
+
+//footer
+footer{
+    padding: 20px 0;
+    background-color: #eef4e8;
+    border-top: 1px solid #ccc;
+    box-shadow: inset 1px 1px 1px #fff;
+    a:link:focus,
+    a:link:hover{
+        color: #ee794e;
+    }
+    .f_top{
+        a{
+            color: #888888;
+        }
+    }
+    .f_bottom {
+        border-top: 1px solid #d6dcd1;
+        padding-top: 20px;
+        color: #aaa;
+        a{
+            color: #aaa;
+        }
+        .f_bottom_c {
+            background: url(../images/footer_logo.png) no-repeat left top;
+            height: 45px;
+            .copy_right {
+                margin-left: 100px;
+            }
+        }
+    }
+    ul.f_nav{
+        list-style: none;
+        padding: 0;
+        li{
+            line-height: 20px;
+        }
+        a {
+            display: block;
+        }
+    }
+    address{
+        color: #888888;
+        font-weight: bold;
+        line-height: 22px;
+    }
+}
