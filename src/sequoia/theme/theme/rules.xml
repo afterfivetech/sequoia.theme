@@ -50,6 +50,17 @@
 
   <!-- move global nav -->
   <replace css:theme-children="#mainnavigation" css:content-children="#portal-mainnavigation" />
+  
+  <!-- front-page slider -->
+  <drop
+    css:theme="#front-page-slider"
+    css:if-not-content=".section-front-page" />
+  <drop
+    css:theme="#front-page-slider"
+    css:if-content=".template-edit" />
+  <drop
+    css:theme="#front-page-slider"
+    css:if-content=".template-topbar-manage-portlets" />
 
   <!-- full-width breadcrumb -->
   <replace
