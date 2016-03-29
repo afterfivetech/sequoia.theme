@@ -79,13 +79,13 @@ body{
 }
 
 //sibar for inner pag
-#column2-container{
+#column2-container:not(:empty){
     background: url(../images/vr3.png) no-repeat center left;
     min-height: 639px;
 }
 
 //sidebar for homepage
-.section-front-page #column2-container{
+.section-front-page #column2-container:not(:empty){
     background: url(../images/vr2.png) no-repeat center left;
     min-height: 362px;
 }

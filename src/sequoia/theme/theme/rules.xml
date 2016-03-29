@@ -44,6 +44,9 @@
     css:if-not-content=".ajax_load"
     css:if-content=".userrole-anonymous"
     />
+  
+  <!--branding-->
+  <replace css:theme="#portal-logo" css:content="#portal-logo" />
 
   <!-- move global nav -->
   <replace css:theme-children="#mainnavigation" css:content-children="#portal-mainnavigation" />
@@ -73,20 +76,16 @@
 
       <div class="{$central}">
         <div class="row">
-          <div class="box">
             <div class="col-xs-12 col-sm-12">
               <xsl:apply-templates css:select="#content" />
             </div>
             <div class="clearFix"></div>
-          </div>
         </div>
         <section id="viewlet-below-content-body" class="row">
-          <div class="box">
             <div class="col-xs-12 col-sm-12">
              <xsl:copy-of css:select="#viewlet-below-content" />
             </div>
             <div class="clearFix"></div>
-          </div>
         </section>
       </div><!--/row-->
   </replace>
@@ -114,7 +113,7 @@
   </rules>
 
   <!-- footer -->
-<replace
+<!--<replace
   css:theme-children="footer .container"
-  css:content-children="#portal-footer-wrapper" />
+  css:content-children="#portal-footer-wrapper" />-->
 </rules>
