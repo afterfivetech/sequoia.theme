@@ -12,6 +12,35 @@
 
     <!-- Bootstrap -->
     <!--<link href="css/bootstrap.css" rel="stylesheet">-->
+    
+    <!--slider css-->
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <style>
+      a.sliderBtn {
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #000000;
+        padding: 20px;
+        margin: 0 10px;
+        color: #000000;
+        text-decoration: none;
+      }
+      
+      a.sliderBtn:hover { background-color: #fc0; }
+      
+      .fSlider { max-width: 855px; }
+      
+      .centerSlider { max-width: 320px; }
+      
+      .centerSlider .sliderItem {
+        box-sizing: border-box;
+        padding: 40px;
+        transition: all 0.2s ease-in-out;
+      }
+      
+      .centerSlider .sliderItem.current { padding: 0; }
+    </style>
+    <link href="css/fSlider.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,18 +78,27 @@
     
     <!--front page slider-->
     <div id="front-page-slider" class="container">
-      <div id="home_tagline" class="col-md-5">
+      <div id="home_tagline">
         <h2 class="tagline">Where comfort and convenience is within reach!</h2>
         <p class="home_desc">Welcome to Sequoia Inn, a modern and value-laden place to stay when visiting Davao City.</p>
         <p class="button"><a href="about-us" title="Read more...">Read more...</a></p>
 			</div>
-      <div id="f_image">
-        <img class="focus" src="./images/fc4.jpg" alt="" width="100%" />
-			</div>
       <div class="fc_s"></div>
       <div class="gradient_line"></div>
-    </div>
-    
+      <!--main slider-->
+      <!--main slider-->
+      <div id="slider-wrapper">
+        <!--start center slider-->
+        <div class="centerSlider">
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Stadium.jpg" />
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Interior.jpg" />
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Hannover.jpg" />
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Stadium.jpg" />
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Interior.jpg" />
+          <img class="sliderItem" src="http://dummy-images.com/buildings/dummy-240x135-Hannover.jpg" />
+        </div><!--end center slider-->
+      </div>
+    </div>    
       
     <!--main container-->
     <div id="main-container" class="container">
@@ -134,5 +172,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <!--slider js-->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/fSlider.js"></script>
+    <script src="js/responsive.js"></script>
+    <script>
+    $('.centerSlider').fSlider({
+                arrowPrevClass: 'fArrow-prev', // provided for easy styling of arrows
+                arrowNextClass: 'fArrow-next', // provided for easy styling of arrows
+                autoplay: false,	
+                centerMode: true,
+                centerPadding: '1.5%', // center mode padding applied to current slide, pass in any style among '20%', '40' & '40px'
+                showSiblingsHowMuch: 0.5, // 0.5 = show 50% width of the sibling slide, if value > 1, > 1 slides will be on each side of the center slide
+                dots: false,
+                setHeight: true, // setHeight to crop sliderItems which are too long
+                widthHeightRatio: 10, // if setHeight is set true, you must provide this value
+                easing: 'easeOutExpo', // pass any jQuery easing
+                numOfNextSlides: [1, 1], // for responsive, please pass an array, for non-responsive, pass either integer or array 
+                pauseOnHover: true,
+                responsive: true,
+                showArrows: true,
+                slidesToShow: [1, 1], // for responsive, please pass an array, for non-responsive, pass either integer or array 
+                speed: 500 // in ms
+              });
+    </script>
+    
   </body>
 </html>
