@@ -38,12 +38,26 @@
     />
 
   <!-- login link -->
-  <after
-    css:theme-children="body"
-    css:content="#portal-anontools"
-    css:if-not-content=".ajax_load"
-    css:if-content=".userrole-anonymous"
-    />
+  <after css:theme-children="#top_info" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous">
+    <dd cid="login_link">
+      <hr />
+      <xsl:element name="a">
+        <xsl:attribute name="href">
+          <xsl:value-of select="//a[@id='personaltools-login']/@href" />
+        </xsl:attribute>
+        <xsl:attribute name="data-pat-plone-modal">
+          <xsl:value-of select="//a[@id='personaltools-login']/@data-pat-plone-modal" />
+        </xsl:attribute>
+        <xsl:attribute name="id">
+          <xsl:value-of select="//a[@id='personaltools-login']/@id" />
+        </xsl:attribute>
+        <xsl:attribute name="class">
+          pat-plone-modal plone-btn plone-btn-danger delete plone-btn-xs
+        </xsl:attribute>
+        <spa>Log in</spa>
+      </xsl:element>
+    </dd>
+  </after>
   
   <!--branding-->
   <replace css:theme="#portal-logo" css:content="#portal-logo" />
