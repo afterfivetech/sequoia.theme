@@ -48,6 +48,8 @@ setup(
         'z3c.jbot',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'collective.plonetruegallery',
+        'Products.PloneFormGen',
     ],
     extras_require={
         'test': [
