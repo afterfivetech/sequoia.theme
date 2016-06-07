@@ -36,8 +36,7 @@
                     <!--<p tal:content="python: dir(brain.getObject())"/>-->
                   </tal:entry>
             </tal:block>
-            <p tal:content="python: dir(context.REQUEST)"/>
-            <p tal:content="python: (context.REQUEST.maybe_webdav_client)"/>
+
     </metal:content-core>
 
 </body>
