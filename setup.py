@@ -50,6 +50,7 @@ setup(
         'plone.app.themingplugins',
         'collective.plonetruegallery',
         'Products.PloneFormGen',
+        'collective.ptg.highslide',
     ],
     extras_require={
         'test': [
