@@ -16,7 +16,8 @@ class rooms_listing_view(grok.View):
         brains = self.context.portal_catalog({'path':{'query':'/'.join(self.context.getPhysicalPath()),
                                                       'depth':1},
                                               'sort_on':'created',
-                                              'portal_type':'Document'})
+                                              'portal_type':'Document',
+                                              'review_state':'published'})
         return brains
     
     def description_val(self, desc):
