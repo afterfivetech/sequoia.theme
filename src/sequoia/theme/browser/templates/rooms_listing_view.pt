@@ -18,26 +18,42 @@
                                    brains view/contents;
                                    toLocalizedTime nocall: context/@@plone/toLocalizedTime;
                                    navigation_root_url context/@@plone_portal_state/navigation_root_url;" tal:condition="brains">
-                  
-                    <div class="row">
-                        <tal:entry tal:repeat="brain brains">
-                            <div class="col-sm-6 col-md-4" tal:define="obj python: brain.getObject()">
-                                <div class="thumbnail">
-                                    <tal:if tal:condition="python: hasattr(obj, 'image')">
-                                        <tal:block tal:define="obj_scale python: obj.restrictedTraverse('@@images'); thumb_img python: obj_scale.scale('image', width=500, height=500)" tal:condition="thumb_img">
-                                            <img tal:attributes="src python:thumb_img.url"/>
-                                        </tal:block>
-                                    </tal:if>
-                                    <div class="caption">
-                                        <h3 tal:content="brain/Title">Thumbnail label</h3>
-                                        <p tal:content="python: view.description_val(brain.Description)"/>
-                                        <p tal:content="structure python: obj.text.output"/>
-                                        <a tal:attributes="href obj/absolute_url">read more . . .</a>
-                                    </div>
+                    
+                    <div class="clearfix"></div>
+                    <tal:entry tal:repeat="brain brains">
+                        
+                        <div class="box-listing" tal:define="obj python: brain.getObject()">
+                            <tal:if tal:condition="python: hasattr(obj, 'image')">
+                                <div class="col-sm-4" style="padding:0;" tal:define="obj_scale python: obj.restrictedTraverse('@@images'); thumb_img python: obj_scale.scale('image', width=500, height=500)" tal:condition="thumb_img">
+                                    <img style="width:100%" tal:attributes="src python:thumb_img.url"/>
+                                </div>
+                            </tal:if>
+                            <div class="col-sm-8" style="padding-bottom:10px">
+                                <h3 tal:content="brain/Title">Thumbnail label</h3>
+                                <p tal:content="python: view.description_val(brain.Description)"/>
+                                <p tal:content="structure python: obj.text.output"/>
+                                <a tal:attributes="href obj/absolute_url">read more . . .</a>
+                            </div>
+                            
+                        </div>
+                        
+                        
+                        <!--<div class="col-sm-6 col-md-4" tal:define="obj python: brain.getObject()">
+                            <div class="">
+                                <tal:if tal:condition="python: hasattr(obj, 'image')">
+                                    <tal:block tal:define="obj_scale python: obj.restrictedTraverse('@@images'); thumb_img python: obj_scale.scale('image', width=500, height=500)" tal:condition="thumb_img">
+                                        <img tal:attributes="src python:thumb_img.url"/>
+                                    </tal:block>
+                                </tal:if>
+                                <div class="caption">
+                                    <h3 tal:content="brain/Title">Thumbnail label</h3>
+                                    <p tal:content="python: view.description_val(brain.Description)"/>
+                                    <p tal:content="structure python: obj.text.output"/>
+                                    <a tal:attributes="href obj/absolute_url">read more . . .</a>
                                 </div>
                             </div>
-                        </tal:entry>
-                    </div>
+                        </div>-->
+                    </tal:entry>
                     
                     <!--<p tal:content="python: dir(brain.getObject())"/>-->
                   
