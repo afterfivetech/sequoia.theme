@@ -17,3 +17,14 @@ class homepage_customview(grok.View):
                                               'id': ('ombu-chicken-house', 'amenities', 'rooms'),
                                               'sort_order':'reverse'})
         return brains
+    
+    def description_val(self, desc):
+        if desc:
+            desc_arr = desc.split(' ')
+            if len(desc_arr) <= 40:
+                return desc
+            else:
+                return ' '.join(desc_arr[:40])+' ...'
+        return ''
+        
+    
