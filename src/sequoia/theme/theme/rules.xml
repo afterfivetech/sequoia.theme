@@ -68,7 +68,7 @@
   <!-- front-page slider -->
   <drop
     css:theme="#front-page-slider"
-    css:if-not-content=".section-front-page" />
+    css:if-not-content=".template-homepage_customview" />
   <drop
     css:theme="#front-page-slider"
     css:if-content=".template-edit" />
