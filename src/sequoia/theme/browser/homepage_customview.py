@@ -12,8 +12,8 @@ class homepage_customview(grok.View):
     def contents(self):
         brains = self.context.portal_catalog({'path':{'query':'/'.join(self.context.getPhysicalPath()),
                                                       'depth':1},
-                                              'review_state':'published',
                                               'sort_on':'created',
-                                              'portal_type':'Document',
-                                              'sort_order':'reverse'})[:3]
+                                              'portal_type':'Folder',
+                                              'id': ('ombu-chicken-house', 'amenities', 'rooms'),
+                                              'sort_order':'reverse'})
         return brains
