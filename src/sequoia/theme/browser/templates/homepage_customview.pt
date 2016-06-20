@@ -27,7 +27,7 @@
                                     <h3 tal:content="brain/Title">Thumbnail label</h3>
                                     <!--<p tal:content="structure python: obj.text.output"/>-->
                                     <p tal:content="python: view.description_val(brain.Description)"/>
-                                    <a tal:attributes="href obj/absolute_url">read more . . .</a>
+                                    <a class="btn btn-danger" tal:attributes="href obj/absolute_url">read more . . .</a>
                                 </div>
                                 
                             </div>
