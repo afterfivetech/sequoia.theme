@@ -137,6 +137,11 @@
     </replace>
   </rules>
   
+<!-- top link to contact form-->
+  <replace css:theme-children="#top_c_form">
+    <a href="contact-us">Contact Form</a>
+  </replace>
+  
 <!-- tagline -->
   <replace css:theme-children="#home_tagline">
     <h2 class="tagline">Where comfort and convenience is within reach!</h2>
@@ -176,4 +181,5 @@
   <replace
   css:theme-children="#footer"
   css:content-children="#portal-footer-wrapper" />
+  
 </rules>
