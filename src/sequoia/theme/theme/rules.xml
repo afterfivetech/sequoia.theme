@@ -173,7 +173,7 @@
     </div>
   </replace>
   <!-- footer -->
-<!--<replace
-  css:theme-children="footer .container"
-  css:content-children="#portal-footer-wrapper" />-->
+  <replace
+  css:theme-children="#footer"
+  css:content-children="#portal-footer-wrapper" />
 </rules>
