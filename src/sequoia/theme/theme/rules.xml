@@ -136,7 +136,42 @@
         </div>
     </replace>
   </rules>
+  
+<!-- tagline -->
+  <replace css:theme-children="#home_tagline">
+    <h2 class="tagline">Where comfort and convenience is within reach!</h2>
+    <p class="home_desc">Welcome to Sequoia Inn, a modern and value-laden place to stay when visiting Davao City.</p>
+    <p class="button"><a href="about-us" title="Read more...">Read more...</a></p>
+  </replace>
+<!--  slider -->
+  <replace css:theme-children="#slider-wrapper">
+    <div class="cascade-slider_container" id="cascade-slider">
+      <div class="cascade-slider_slides">
+        <div class="cascade-slider_item">
+          <a href="about-us"><img src="/++theme++sequoia.theme/images/01.png" alt="" /></a>
+        </div>
+        <div class="cascade-slider_item">
+          <a href="functions"><img src="/++theme++sequoia.theme/images/02.png" alt="" /></a>
+        </div>
+        <div class="cascade-slider_item">
+          <a href="amenities"><img src="/++theme++sequoia.theme/images/03.png" alt="" /></a>
+        </div>
+        <div class="cascade-slider_item">
+          <a href="rooms/matrimonial-rooms"><img src="/++theme++sequoia.theme/images/04.png" alt="" /></a>                
+        </div>
+        <div class="cascade-slider_item">
+          <a href="rooms/single-rooms"><img src="/++theme++sequoia.theme/images/05.png" alt="" /></a>                
+        </div>
+      </div>
 
+      <span class="cascade-slider_arrow cascade-slider_arrow-left" data-action="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </span>
+      <span class="cascade-slider_arrow cascade-slider_arrow-right" data-action="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </span>
+    </div>
+  </replace>
   <!-- footer -->
 <!--<replace
   css:theme-children="footer .container"
