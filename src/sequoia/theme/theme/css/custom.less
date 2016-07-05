@@ -280,6 +280,35 @@ footer{
 }
 
 //custom portlet
+.c_portlet{
+    position: relative;
+    margin-bottom: 20px;
+    border: 2px solid #b2cd6e;
+    border-radius: 10px;
+    background: #ebf3d5;
+    background: -moz-linear-gradient(top,  #ebf3d5 0%, #dbe8ae 100%);
+    background: -webkit-linear-gradient(top,  #ebf3d5 0%,#dbe8ae 100%);
+    background: linear-gradient(to bottom,  #ebf3d5 0%,#dbe8ae 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebf3d5', endColorstr='#dbe8ae',GradientType=0 );
+    .c_portlet-inner{
+        margin: 0 10px;
+        img{
+            background-color: #fff;
+            position: absolute;
+            right: 10px;
+            top: -2px;
+            box-shadow: #888 0 0 10px;
+            padding: 5px;
+        }
+        .c_portlet-text{
+            width: 60%;
+        }
+        h3{
+            font-size: 16px;
+        }
+    }
+}
+
 .c_form.r_form{
     background: transparent url(../images/reservation2.png) no-repeat center center;
     background-size: cover;
